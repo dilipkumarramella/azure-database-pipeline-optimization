@@ -74,8 +74,20 @@ The project reflects real-world enterprise scenarios , showcasing both ETL pipel
 4. **Performance Tuning**
     - Executed complex queries involving large joins and aggregations.
     - Measured execution time & CPU time before optimization.
-    - Added non-clustered indexes on critical columns (`customer_id`, `product_id`, `status`).
+    - Used Query Store to analyze query performance and identify top resource-consuming queries.
+    - Added non-clustered indexes on critical columns (`customer_id`, `product_id`, `status`) on Orders table.
     - Logged before/after metrics in PerformanceLog for reporting.
+
+   #### Indexing Strategy & Rationale
+     - **Default Clustered Indexes:**  
+  The `Customers` and `Products` tables already had clustered indexes on their primary keys (`customer_id` and `product_id` respectively).
+     - **Problem:**  
+  The `Orders` table had only a clustered index on `order_id`, so queries performing joins on `customer_id` and `product_id` caused table scans.
+     - **Solution:**  
+  Created non-clustered indexes on `Orders(customer_id)` and `Orders(product_id)` to optimize join performance and enable index seeks during query execution.
+     - **Result:**  
+  Query performance improved significantly for join-heavy queries. Execution plans shifted from index scans to index seeks on the Orders table.
+
 
 5. **Cost Management**
     - Enabled Auto-Pause to suspend the DB during inactivity.
