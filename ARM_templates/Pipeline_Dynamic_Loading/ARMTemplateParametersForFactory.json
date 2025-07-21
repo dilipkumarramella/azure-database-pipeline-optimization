@@ -1,0 +1,33 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "factoryName": {
+            "value": "adf-dataopsmonitor-dev"
+        },
+        "LinkedService_ADLS_accountKey": {
+            "value": ""
+        },
+        "LinkedService_AzureSQL_password": {
+            "value": ""
+        },
+        "LinkedService_ADLS_Mapping_accountKey": {
+            "value": ""
+        },
+        "LinkedService_ADLS_properties_typeProperties_url": {
+            "value": "https://stdataopsmonitordev.dfs.core.windows.net/"
+        },
+        "LinkedService_AzureSQL_properties_typeProperties_server": {
+            "value": "sqlsrv-dataopsmonitor-dev.database.windows.net"
+        },
+        "LinkedService_AzureSQL_properties_typeProperties_database": {
+            "value": "sqldb-salesanalytics"
+        },
+        "LinkedService_AzureSQL_properties_typeProperties_userName": {
+            "value": "sqladmin"
+        },
+        "LinkedService_ADLS_Mapping_properties_typeProperties_url": {
+            "value": "https://stdataopsmonitordev.dfs.core.windows.net/"
+        }
+    }
+}
