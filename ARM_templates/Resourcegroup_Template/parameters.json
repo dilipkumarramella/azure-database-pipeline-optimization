@@ -1,0 +1,24 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vulnerabilityAssessments_Default_storageContainerPath": {
+            "value": null
+        },
+        "actionGroups_AlertUser_name": {
+            "value": null
+        },
+        "metricAlerts_CPU_utilization_name": {
+            "value": null
+        },
+        "servers_sqlsrv_dataopsmonitor_dev_name": {
+            "value": null
+        },
+        "storageAccounts_stdataopsmonitordev_name": {
+            "value": null
+        },
+        "workspaces_dataops_monitor_law_name": {
+            "value": null
+        }
+    }
+}
