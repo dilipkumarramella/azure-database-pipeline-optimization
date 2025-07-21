@@ -1,0 +1,4 @@
+file_name,table_name
+Customers.csv,Customers
+Orders.csv,Orders
+Products.csv,Products
