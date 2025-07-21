@@ -100,7 +100,7 @@ The project reflects real-world enterprise scenarios , showcasing both ETL pipel
 ---
 
 ## Performance Improvement Snapshot 
-| QueryName             | ElapsedBefore | ElapsedAfter | Improvement% |
+| QueryName             | ElapsedTimeBefore | ElapsedTimeAfter | Improvement% |
 |----------------------------------|--------------|-------------|-------------|
 | PendingOrdersWithProductDetails | 6 ms    | 6 ms    | 0%     |
 | CategoryWiseSalesSummary    | 12 ms    | 11 ms   | 8.33%   |
@@ -108,6 +108,9 @@ The project reflects real-world enterprise scenarios , showcasing both ETL pipel
 | TopSpendingCustomers      | 12 ms    | 7 ms    | 41.67%   |
 | CountryAndSalesBreakdown    | 24 ms    | 15 ms   | 37.50%   |
 
+Note: Detailed execution time and screenshots for each query(before & after indexing) are available in the Screenshot folder:
+- Query-ExecutionTime(ms)-BeforeTuning
+- Query-ExecutionTime(ms)-AfterTuning
 ---
 
 ## Challenges Faced & Fixes 
